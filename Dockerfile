@@ -3,7 +3,8 @@ FROM node:20-slim
 ENV NODE_ENV=production \
     PORT=80
 
-RUN apt-get update && \
+RUN echo 'apt::sandbox::seccomp "false";' > /etc/apt/apt.conf.d/999seccomp && \
+    apt-get update && \
     apt-get install -y sqlite3 && \
     rm -rf /var/lib/apt/lists/*
 
