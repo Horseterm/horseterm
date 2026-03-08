@@ -3,6 +3,8 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
+    security_opt:
+      - seccomp:unconfined
     container_name: terminologue
     ports:
       - "3380:80"
