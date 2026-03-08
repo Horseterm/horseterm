@@ -1,4 +1,4 @@
-FROM node:20-trixie-slim
+FROM node:20-trixie
 
 ENV NODE_ENV=production \
     PORT=80
