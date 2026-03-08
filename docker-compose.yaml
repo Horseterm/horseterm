@@ -5,7 +5,7 @@ services:
       dockerfile: Dockerfile
     container_name: terminologue
     ports:
-      - "80:80"
+      - "3380:80"
     volumes:
-      - ./data:/app/data
+      - /volume1/docker/terminologue/data:/app/data
     restart: unless-stopped
